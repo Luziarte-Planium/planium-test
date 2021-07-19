@@ -38,7 +38,7 @@
 6. Ao final, unir todas as informações e salvar em um JSON chamado proposta.json, o mesmo deverá conter todas as informações sobre os beneficiarios, planos e preços.
     - **Observações:**
     Seu **back-end** deverá ser feita utilizando PHP ou Node.js
-    Criar um front-end pra consumir essas informações, não se importe com o **UI**, fique a vontade para utilizar a ferramenta que quiser.
+    Criar um front-end pra consumir essas informações, fique a vontade para utilizar a ferramenta/framework que quiser.
 
 7. Ao término, dê reply no e-mail que você originalmente recebeu com o link do seu repositório no [GitHub](https://github.com/).
   - Tempo total: 5 dias após o envio do teste.
