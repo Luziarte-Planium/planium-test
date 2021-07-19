@@ -1,0 +1,32 @@
+[
+  {
+    "registro": "reg1",
+    "nome": "Bitix Customer Plano 1",
+    "codigo": 1
+  },
+  {
+    "registro": "reg2",
+    "nome": "Bitix Customer Plano 2",
+    "codigo": 2
+  },
+  {
+    "registro": "reg3",
+    "nome": "Bitix Customer Plano 3",
+    "codigo": 3
+  },
+  {
+    "registro": "reg4",
+    "nome": "Bitix Customer Plano 4",
+    "codigo": 4
+  },
+  {
+    "registro": "reg5",
+    "nome": "Bitix Customer Plano 5",
+    "codigo": 5
+  },
+  {
+    "registro": "reg6",
+    "nome": "Bitix Customer Plano 6",
+    "codigo": 6
+  }
+]
