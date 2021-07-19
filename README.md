@@ -5,7 +5,7 @@
   - "Beneficiários" são as pessoas participantes/pagantes de um plano de saúde.
 
 
-1. Você recebeu duas tabelas em JSON, uma de Planos e outra de Preços.
+1. Você recebeu duas tabelas em JSON(presente nesse repositório), uma de Planos e outra de Preços.
 	- A tabela de plano possui os planos que serão vendidos.
 	- A tabela de preço possui o(s) preço(s) para cada plano listado na tabela de planos.
 
