@@ -3,25 +3,36 @@ import React, { useState, createContext } from 'react';
 export const FormContext = createContext();
 
 export default function FormProvider({ children }) {
-  const [isFormDialogOpen, setIsFormDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
-  const [nome, setNome] = useState('');
-  const [idade, setIdade] = useState(0);
-  const [valorDoPlano, setValorDoPlano] = useState(0);
+  const [formValues, setFormValues] = useState({
+    nome: '',
+    idade: 0,
+    plano: 0,
+    beneficiarios: 0,
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  }
+
+  function clearFormData() {
+    setFormValues({
+      nome: '',
+      idade: 0,
+      plano: 0,
+      beneficiarios: 0,
+    });
+  }
 
   return (
     <FormContext.Provider
       value={{
-        isFormDialogOpen,
         isDeleteDialogOpen,
-        nome,
-        idade,
-        valorDoPlano,
-        setIsFormDialogOpen,
         setIsDeleteDialogOpen,
-        setNome,
-        setIdade,
-        setValorDoPlano,
+        handleChange,
+        formValues,
+        clearFormData,
       }}
     >
       {children}

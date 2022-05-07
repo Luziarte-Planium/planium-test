@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import MaterialTable from '@material-table/core';
 import React, { useContext } from 'react';
 import localization from '../utils/materialTableLocalization';
@@ -9,8 +10,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { FormContext } from '../context/FormContext';
 
 export default function Table({ columns, data, title }) {
-  const { setIsFormDialogOpen, setIsDeleteDialogOpen } =
-    useContext(FormContext);
+  const { setIsDeleteDialogOpen } = useContext(FormContext);
+  const navigate = useNavigate();
 
   return (
     <MaterialTable
@@ -32,20 +33,24 @@ export default function Table({ columns, data, title }) {
         {
           icon: () => <EditIcon />,
           tooltip: 'Editar registro',
-          onClick: (props, rowData) =>
-            setIsFormDialogOpen('editRegistry', rowData),
+          onClick: (props, rowData) => {
+            navigate(`/beneficiario/editar`);
+          },
         },
         {
           icon: () => <DeleteIcon />,
           tooltip: 'Deletar registro',
-          onClick: (props, rowData) => setIsDeleteDialogOpen(rowData),
+          onClick: (props, rowData) => {
+            setIsDeleteDialogOpen();
+          },
         },
         {
           icon: () => <AddIcon />,
           tooltip: 'Novo registro',
           isFreeAction: true,
-          onClick: (props, rowData) =>
-            setIsFormDialogOpen('newRegistry', rowData),
+          onClick: (props, rowData) => {
+            navigate(`/beneficiario/novo`);
+          },
         },
       ]}
     />

@@ -47,7 +47,7 @@ class BeneficiariosController extends Controller
                     "mensagem" => AppConfigs::SUCESSO_AO_CADASTRAR,
                     "dados" => $novaProposta
                 );
-                $this->stauts = AppConfigs::HTTP_STATUS_CREATED;
+                $this->status = AppConfigs::HTTP_STATUS_CREATED;
             }
         } catch (\Throwable $th) {
             $resposta = array(

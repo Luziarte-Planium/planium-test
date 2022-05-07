@@ -37,6 +37,7 @@ export default function Home() {
     const beneficiarys = await listAllBeneficiarys({ showAlert: true });
     setTableData(beneficiarys);
   }
+
   return (
     <Grid
       container
@@ -52,22 +53,13 @@ export default function Home() {
             columns={beneficiaryColumns}
             data={tableData}
             title="Lista de Beneficíarios"
+
             // openForm={setDialogOpen}
             // setOpenConfirmationDialog={setOpenConfirmationDialog}
           />
         </Content>
       </Grid>
-      {/* <FormDialog
-        open={openDialog}
-        setDialogOpen={setDialogOpen}
-        formValues={selectedValues}
-        handleChange={handleChange}
-        action={this[action]}
-        clearFormData={clearFormData}
-        handleSelectedCompanies={handleSelectedCompanies}
-        Form={FormCompany}
-      />
-      <ConfirmationDialog
+      {/* <ConfirmationDialog
         title="Você deseja deletar este registro?"
         text="Ao confirmar, esta operação não poderá ser desfeita"
         open={openDeleteDialog}
