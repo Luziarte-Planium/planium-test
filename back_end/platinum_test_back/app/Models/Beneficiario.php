@@ -20,6 +20,13 @@ class Beneficiario extends Model
         $this->beneficiarios = $beneficiarios;
     }
 
+    /**
+     * Esta função irá salvar no arquivo proposta.json uma nova proposta
+     *
+     * @param float $valorDoPlano
+     * @param array $plano
+     * @return array
+     */
     public function cadastrar(float $valorDoPlano, array $plano): array
     {
         $this->plano = $plano;
