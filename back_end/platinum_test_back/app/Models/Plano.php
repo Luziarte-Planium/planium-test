@@ -34,4 +34,14 @@ class Plano extends Model
 
         return false;
     }
+
+    public function listarPorId(int $codigo): array
+    {
+        $planos = $this->listar();
+
+        $plano = array_filter($planos, function ($preco) use ($codigo) {
+            return $preco->codigo === $codigo;
+        });
+        return [...$plano];
+    }
 }
