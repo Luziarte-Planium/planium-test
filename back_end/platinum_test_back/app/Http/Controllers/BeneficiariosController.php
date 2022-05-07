@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\AppConfigs;
+use App\Models\Beneficiario;
+use App\Models\Plano;
+use App\Models\Preco;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+class BeneficiariosController extends Controller
+{
+    //
+    protected int $status = AppConfigs::HTTP_STATUS_BAD_REQUEST;
+    public function novoBeneficario(Request $request)
+    {
+        $resposta = array();
+        $Plano = new Plano();
+        $Preco = new Preco();
+
+        try {
+            $planoEhValido = $Plano->planoEhValido($request->plano);
+            if (!$planoEhValido) {
+                $resposta = array(
+                    "mensagem" =>  AppConfigs::PLANO_INVALIDO,
+                    "dados" => array(),
+                );
+            } else {
+                $Beneficiario = new Beneficiario(
+                    $request->nome,
+                    $request->idade,
+                    $request->beneficiarios,
+                );
+                $precoPlano = $Preco->precoPorFaixaDeIdade($Beneficiario->idade);
+                $plano = $Plano->listarPorId($request->plano);
+                $valorDoPlano =  $precoPlano * $Beneficiario->beneficiarios;
+                $novaProposta = $Beneficiario->cadastrar($valorDoPlano, $plano);
+                $resposta = array(
+                    "mensagem" => AppConfigs::SUCESSO_AO_CADASTRAR,
+                    "dados" => $novaProposta
+                );
+                $this->stauts = AppConfigs::HTTP_STATUS_CREATED;
+            }
+        } catch (\Throwable $th) {
+            $resposta = array(
+                "mensagem" => AppConfigs::FALHA_AO_CADASTRAR,
+                "erro" => $th->getMessage()
+            );
+        }
+
+        return (new Response($resposta, $this->status));
+    }
+}
