@@ -10,13 +10,24 @@ class Preco extends Model
     private int $minimo_vida;
     private float $preco;
 
-    public function listar()
+    /**
+     * Esta função irá retornar todos os precos no arquivo prices.json
+     *
+     * @return array
+     */
+    public function listar(): array
     {
         $arquivo = file_get_contents('../database/json/prices.json');
         $precos = json_decode($arquivo);
         return $precos;
     }
 
+    /**
+     * Esta função irá retornar um preço pelo basedo no $codigo
+     *
+     * @param integer $codigo do preço
+     * @return array
+     */
     public function listarPorId(int $codigo): array
     {
         $precos = $this->listar();
@@ -27,7 +38,13 @@ class Preco extends Model
         return $preco;
     }
 
-    public function precoPorFaixaDeIdade(int $idade)
+    /**
+     * Esta função irá calcular o preco baseado na faixa de idade
+     *
+     * @param integer $idade
+     * @return float
+     */
+    public function precoPorFaixaDeIdade(int $idade): float
     {
         $precos = $this->listar();
         if ($idade >= 17) {
