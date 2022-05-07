@@ -52,9 +52,28 @@ export default function Home() {
             columns={beneficiaryColumns}
             data={tableData}
             title="Lista de Beneficíarios"
+            // openForm={setDialogOpen}
+            // setOpenConfirmationDialog={setOpenConfirmationDialog}
           />
         </Content>
       </Grid>
+      {/* <FormDialog
+        open={openDialog}
+        setDialogOpen={setDialogOpen}
+        formValues={selectedValues}
+        handleChange={handleChange}
+        action={this[action]}
+        clearFormData={clearFormData}
+        handleSelectedCompanies={handleSelectedCompanies}
+        Form={FormCompany}
+      />
+      <ConfirmationDialog
+        title="Você deseja deletar este registro?"
+        text="Ao confirmar, esta operação não poderá ser desfeita"
+        open={openDeleteDialog}
+        setOpen={setOpenConfirmationDialog}
+        action={this[action]}
+      /> */}
     </Grid>
   );
 }

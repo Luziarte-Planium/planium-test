@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import MaterialTable from '@material-table/core';
-import React from 'react';
+import React, { useContext } from 'react';
 import localization from '../utils/materialTableLocalization';
 import { Paper } from '@material-ui/core';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { FormContext } from '../context/FormContext';
 
 export default function Table({ columns, data, title }) {
+  const { setIsFormDialogOpen, setIsDeleteDialogOpen } =
+    useContext(FormContext);
+
   return (
     <MaterialTable
       components={{
@@ -29,20 +33,19 @@ export default function Table({ columns, data, title }) {
           icon: () => <EditIcon />,
           tooltip: 'Editar registro',
           onClick: (props, rowData) =>
-            this.props.openForm('editRegistry', rowData),
+            setIsFormDialogOpen('editRegistry', rowData),
         },
         {
           icon: () => <DeleteIcon />,
           tooltip: 'Deletar registro',
-          onClick: (props, rowData) =>
-            this.props.openConfirmationDialog(rowData),
+          onClick: (props, rowData) => setIsDeleteDialogOpen(rowData),
         },
         {
           icon: () => <AddIcon />,
           tooltip: 'Novo registro',
           isFreeAction: true,
           onClick: (props, rowData) =>
-            this.props.openForm('newRegistry', rowData),
+            setIsFormDialogOpen('newRegistry', rowData),
         },
       ]}
     />
