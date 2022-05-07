@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import { Box, Paper, Typography } from '@mui/material';
 import React from 'react';
 
-export default function Content() {
-  const { title, children } = this.props;
+export default function Content({ title, children }) {
   return (
     <Box p={2}>
       <Paper elevation={3} component="div" sx={{ textAlign: 'center' }}>
