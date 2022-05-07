@@ -73,7 +73,7 @@ class BeneficiariosController extends Controller
                 "mensagem" => AppConfigs::SUCESSO_AO_PESQUISAR,
                 "dados" => $Beneficiarios
             );
-            $this->stauts = AppConfigs::HTTP_STATUS_OK;
+            $this->status = AppConfigs::HTTP_STATUS_OK;
         } catch (\Throwable $th) {
             $resposta = array(
                 "mensagem" => AppConfigs::FALHA_AO_PESQUISAR,
