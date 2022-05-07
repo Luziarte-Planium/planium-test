@@ -7,7 +7,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => '/beneficiario'], function () use ($router) {
-    $router->post('/', 'BeneficiariosController@novoBeneficario');
+$router->group(['prefix' => 'beneficiario'], function () use ($router) {
     $router->get('/', 'BeneficiariosController@listarTodos');
+    $router->post('/', 'BeneficiariosController@novoBeneficario');
 });
