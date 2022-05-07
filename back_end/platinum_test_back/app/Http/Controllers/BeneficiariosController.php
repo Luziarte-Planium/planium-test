@@ -13,6 +13,13 @@ class BeneficiariosController extends Controller
 {
     //
     protected int $status = AppConfigs::HTTP_STATUS_BAD_REQUEST;
+
+    /**
+     * Método controlador para requisições para um novo  beneficiário
+     *
+     * @param Request $request
+     * @return void
+     */
     public function novoBeneficario(Request $request)
     {
         $resposta = array();
@@ -45,6 +52,31 @@ class BeneficiariosController extends Controller
         } catch (\Throwable $th) {
             $resposta = array(
                 "mensagem" => AppConfigs::FALHA_AO_CADASTRAR,
+                "erro" => $th->getMessage()
+            );
+        }
+
+        return (new Response($resposta, $this->status));
+    }
+
+    /**
+     * Método controlador para listar todos beneficiários
+     *
+     * @return void
+     */
+    public function listarTodos()
+    {
+        $resposta = array();
+        try {
+            $Beneficiarios = Beneficiario::listarTodos();
+            $resposta = array(
+                "mensagem" => AppConfigs::SUCESSO_AO_PESQUISAR,
+                "dados" => $Beneficiarios
+            );
+            $this->stauts = AppConfigs::HTTP_STATUS_OK;
+        } catch (\Throwable $th) {
+            $resposta = array(
+                "mensagem" => AppConfigs::FALHA_AO_PESQUISAR,
                 "erro" => $th->getMessage()
             );
         }

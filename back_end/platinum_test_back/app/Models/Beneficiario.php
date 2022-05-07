@@ -21,6 +21,16 @@ class Beneficiario extends Model
     }
 
     /**
+     * Está função irá retornar todos os beneficiários já cadastrdos
+     *
+     * @return array
+     */
+    public static function listarTodos(): array
+    {
+        $beneficiarios = json_decode(file_get_contents("../database/json/proposta.json"));
+        return $beneficiarios;
+    }
+    /**
      * Esta função irá salvar no arquivo proposta.json uma nova proposta
      *
      * @param float $valorDoPlano

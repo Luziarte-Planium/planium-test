@@ -9,4 +9,5 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => '/beneficiario'], function () use ($router) {
     $router->post('/', 'BeneficiariosController@novoBeneficario');
+    $router->get('/', 'BeneficiariosController@listarTodos');
 });
