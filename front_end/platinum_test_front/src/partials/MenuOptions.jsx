@@ -10,7 +10,7 @@ import HomeOutlined from '@mui/icons-material/HomeOutlined';
 export default function MenuOptions() {
   return (
     <>
-      <Link to="#">
+      <Link to="/">
         <ListItem button>
           <ListItemIcon sx={{ p: 1, ml: 3 }}>
             <HomeOutlined />

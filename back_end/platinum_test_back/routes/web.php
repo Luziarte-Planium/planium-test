@@ -10,4 +10,5 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'beneficiario'], function () use ($router) {
     $router->get('/', 'BeneficiariosController@listarTodos');
     $router->post('/', 'BeneficiariosController@novoBeneficario');
+    $router->delete('/{id}', 'BeneficiariosController@novoBeneficario');
 });
