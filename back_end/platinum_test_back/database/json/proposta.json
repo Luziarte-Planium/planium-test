@@ -1,0 +1,16 @@
+[
+  {
+    "codigo": "6276b4b49ea1c",
+    "nome": "Alexsandor",
+    "idade": 23,
+    "beneficiarios": 4,
+    "valorDoPlano": 40,
+    "plano": [
+      {
+        "registro": "reg3",
+        "nome": "Bitix Customer Plano 3",
+        "codigo": 3
+      }
+    ]
+  }
+]
