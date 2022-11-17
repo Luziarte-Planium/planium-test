@@ -15,12 +15,12 @@ const beneficiario = () =>{
     viewBeneficiario(_dataBeneficiario)
 }
 
-(async () => {
-    const planos = await fetch('http://10.4.0.82:55200/planos', {
-        method: 'GET'})
-
-        const data = await planos.json()
-        listarValores(data)    
+(() => {
+    fetch('http://10.4.0.82:55200/planos', {
+        method: 'GET'}).then((response) => {
+            const data = response.json();
+            data.then((json) => listarValores(json))
+        })    
 })()
 
 const listarValores = (arr) => {
@@ -43,8 +43,8 @@ const viewBeneficiario = (arr) =>{
     });
 }
 
-const inserirBeneficiario = async ()=>{  
-    await fetch('http://10.4.0.82:55200/beneficiarios-cadastrar', {
+const inserirBeneficiario = ()=>{  
+    fetch('http://10.4.0.82:55200/beneficiarios-cadastrar', {
         method: 'POST',
         body : JSON.stringify({
         "plano" : plano.value,

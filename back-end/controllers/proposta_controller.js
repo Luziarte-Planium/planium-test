@@ -17,9 +17,9 @@ const propostaController = {
 
     Find : (req, res) => {
         try {
-            //retorna lista
+            //retorna lista      
             return res.status(201).json(calculoProposta())
-             
+
         } catch (error) {
             //error
             res.status(403).json({message:`Houve um erro : ${error}`})

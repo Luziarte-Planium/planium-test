@@ -1,7 +1,7 @@
 const listaProposta = document.getElementById("listaProposta")
 
-const insertProposta = async () => {
-    await fetch('http://10.4.0.82:55200/proposta-cadastrar', {
+const insertProposta = () => {
+    fetch('http://10.4.0.82:55200/proposta-cadastrar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     }).then((response) => {
@@ -45,17 +45,25 @@ const viewProposta = (arr) =>{
     });
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-(async() =>{
-    await sleep(1 * 1000)
-    
-    const proposta = await fetch('http://10.4.0.82:55200/proposta-find', {
-        method: 'GET'})
-
-        const data = await proposta.json()
-        viewProposta(data)    
+(() => {
+    listaProposta.innerHTML = 
+        `<div class="d-flex justify-content-center my-5">
+            <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+            </div>
+         </div>
+        `
+    setTimeout(()=>{
+        fetch('http://10.4.0.82:55200/proposta-find', {
+            method: 'GET',
+                }).then((response) => {
+                const res = response.json()
+                res.then((json) => {
+                    viewProposta(json)
+                })
+            })
+    },2*1000)
 })()
+
+
 

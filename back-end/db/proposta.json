@@ -1,11 +1,42 @@
 [
   {
-    "codigo": 83,
+    "codigo": 2,
+    "plano": "Bitix Customer Plano 1",
+    "beneficiario": [
+      {
+        "nome": "Vanessa",
+        "idade": "22",
+        "preco": 12
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 12
+  },
+  {
+    "codigo": 3,
     "plano": "Bitix Customer Plano 2",
     "beneficiario": [
       {
-        "nome": "fffff",
-        "idade": "23",
+        "nome": "Ronaldo",
+        "idade": "52",
+        "preco": 40
+      },
+      {
+        "nome": "Sintique",
+        "idade": "30",
+        "preco": 30
+      }
+    ],
+    "quantidade": 2,
+    "precoTotal": 70
+  },
+  {
+    "codigo": 1,
+    "plano": "Bitix Customer Plano 2",
+    "beneficiario": [
+      {
+        "nome": "Wesley",
+        "idade": "36",
         "preco": 30
       }
     ],
@@ -13,104 +44,12 @@
     "precoTotal": 30
   },
   {
-    "codigo": 86,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [],
-    "quantidade": 0,
-    "precoTotal": 0
-  },
-  {
-    "codigo": 86,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [],
-    "quantidade": 0,
-    "precoTotal": 0
-  },
-  {
-    "codigo": 87,
+    "codigo": 2,
     "plano": "Bitix Customer Plano 3",
     "beneficiario": [
       {
-        "nome": "qqqqqqqq",
-        "idade": "100",
-        "preco": 50
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 50
-  },
-  {
-    "codigo": 87,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "qqqqqqqq",
-        "idade": "100",
-        "preco": 50
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 50
-  },
-  {
-    "codigo": 87,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "qqqqqqqq",
-        "idade": "100",
-        "preco": 50
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 50
-  },
-  {
-    "codigo": 87,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "qqqqqqqq",
-        "idade": "100",
-        "preco": 50
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 50
-  },
-  {
-    "codigo": 87,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "qqqqqqqq",
-        "idade": "100",
-        "preco": 50
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 50
-  },
-  {
-    "codigo": 95,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "ww",
-        "idade": "2",
-        "preco": 30
-      }
-    ],
-    "quantidade": 1,
-    "precoTotal": 30
-  },
-  {
-    "codigo": 97,
-    "plano": "Bitix Customer Plano 3",
-    "beneficiario": [
-      {
-        "nome": "ee",
-        "idade": "22",
+        "nome": "Wesley",
+        "idade": "36",
         "preco": 40
       }
     ],
@@ -118,52 +57,39 @@
     "precoTotal": 40
   },
   {
-    "codigo": 98,
+    "codigo": 3,
     "plano": "Bitix Customer Plano 5",
     "beneficiario": [
       {
-        "nome": "Vanessa",
-        "idade": "26",
-        "preco": 60
-      },
-      {
-        "nome": "Andre",
+        "nome": "Sintique",
         "idade": "22",
         "preco": 60
-      }
-    ],
-    "quantidade": 2,
-    "precoTotal": 120
-  },
-  {
-    "codigo": 100,
-    "plano": "Bitix Customer Plano 1",
-    "beneficiario": [
-      {
-        "nome": "Marcia",
-        "idade": "40",
-        "preco": 12
       },
       {
-        "nome": "Osvaldo",
-        "idade": "42",
-        "preco": 15
+        "nome": "Romel",
+        "idade": "50",
+        "preco": 70
+      },
+      {
+        "nome": "Ronaldo",
+        "idade": "62",
+        "preco": 70
       }
     ],
-    "quantidade": 2,
-    "precoTotal": 27
+    "quantidade": 3,
+    "precoTotal": 200
   },
   {
-    "codigo": 103,
+    "codigo": 4,
     "plano": "Bitix Customer Plano 3",
     "beneficiario": [
       {
-        "nome": "Romel",
-        "idade": "60",
-        "preco": 50
+        "nome": "Erick",
+        "idade": "28",
+        "preco": 40
       }
     ],
     "quantidade": 1,
-    "precoTotal": 50
+    "precoTotal": 40
   }
 ]
