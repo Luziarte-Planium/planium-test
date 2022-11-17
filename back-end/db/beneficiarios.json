@@ -977,5 +977,53 @@
       }
     ],
     "quantidade": 2
+  },
+  {
+    "codigo": 100,
+    "plano": "Bitix Customer Plano 1",
+    "beneficiario": [
+      {
+        "nome": "Marcia",
+        "idade": "40"
+      },
+      {
+        "nome": "Osvaldo",
+        "idade": "42"
+      }
+    ],
+    "quantidade": 2
+  },
+  {
+    "codigo": 101,
+    "plano": "Bitix Customer Plano 2",
+    "beneficiario": [
+      {
+        "nome": "wesley",
+        "idade": "40"
+      }
+    ],
+    "quantidade": 1
+  },
+  {
+    "codigo": 102,
+    "plano": "Bitix Customer Plano 5",
+    "beneficiario": [
+      {
+        "nome": "Andre",
+        "idade": "30"
+      }
+    ],
+    "quantidade": 1
+  },
+  {
+    "codigo": 103,
+    "plano": "Bitix Customer Plano 3",
+    "beneficiario": [
+      {
+        "nome": "Romel",
+        "idade": "60"
+      }
+    ],
+    "quantidade": 1
   }
 ]

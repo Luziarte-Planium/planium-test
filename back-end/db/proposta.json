@@ -134,5 +134,36 @@
     ],
     "quantidade": 2,
     "precoTotal": 120
+  },
+  {
+    "codigo": 100,
+    "plano": "Bitix Customer Plano 1",
+    "beneficiario": [
+      {
+        "nome": "Marcia",
+        "idade": "40",
+        "preco": 12
+      },
+      {
+        "nome": "Osvaldo",
+        "idade": "42",
+        "preco": 15
+      }
+    ],
+    "quantidade": 2,
+    "precoTotal": 27
+  },
+  {
+    "codigo": 103,
+    "plano": "Bitix Customer Plano 3",
+    "beneficiario": [
+      {
+        "nome": "Romel",
+        "idade": "60",
+        "preco": 50
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 50
   }
 ]
