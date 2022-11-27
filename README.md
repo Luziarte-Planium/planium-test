@@ -3,7 +3,7 @@
 
 **SCREENSHOT**
 
-[screenshot](/front-end/public/img/01.PNG)
+<img src="/front-end/public/img/01.PNG" alt="IMAGEM 01" width="500" height="600">
 
 **Observações:**
   - "Plano" dito aqui significa "Plano de Saúde".
