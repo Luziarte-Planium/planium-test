@@ -3,7 +3,9 @@
 
 **SCREENSHOT**
 
-<img src="/front-end/public/img/01.PNG" alt="IMAGEM 01" width="500" height="600">
+<img src="/front-end/public/img/01.PNG" alt="IMAGEM 01" width="770" height="543">
+<img src="/front-end/public/img/02.PNG" alt="IMAGEM 02" width="897" height="539">
+<img src="/front-end/public/img/03.PNG" alt="IMAGEM 03" width="704" height="441">
 
 **Observações:**
   - "Plano" dito aqui significa "Plano de Saúde".
