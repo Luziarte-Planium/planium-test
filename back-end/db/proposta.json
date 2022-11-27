@@ -91,5 +91,121 @@
     ],
     "quantidade": 1,
     "precoTotal": 40
+  },
+  {
+    "codigo": 5,
+    "plano": "Bitix Customer Plano 1",
+    "beneficiario": [
+      {
+        "nome": "W",
+        "idade": "2",
+        "preco": 10
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 10
+  },
+  {
+    "codigo": 6,
+    "plano": "Bitix Customer Plano 1",
+    "beneficiario": [
+      {
+        "nome": "I",
+        "idade": "1",
+        "preco": 10
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 10
+  },
+  {
+    "codigo": 7,
+    "plano": "Bitix Customer Plano 3",
+    "beneficiario": [
+      {
+        "nome": "W",
+        "idade": "50",
+        "preco": 50
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 50
+  },
+  {
+    "codigo": 8,
+    "plano": "Bitix Customer Plano 4",
+    "beneficiario": [
+      {
+        "nome": "W",
+        "idade": "60",
+        "preco": 60
+      }
+    ],
+    "quantidade": 1,
+    "precoTotal": 60
+  },
+  {
+    "codigo": 9,
+    "plano": "Bitix Customer Plano 4",
+    "beneficiario": [
+      {
+        "nome": "W",
+        "idade": "50",
+        "preco": 60
+      },
+      {
+        "nome": "T",
+        "idade": "4",
+        "preco": 40
+      },
+      {
+        "nome": "U",
+        "idade": "25",
+        "preco": 50
+      }
+    ],
+    "quantidade": 3,
+    "precoTotal": 150
+  },
+  {
+    "codigo": 10,
+    "plano": "Bitix Customer Plano 3",
+    "beneficiario": [
+      {
+        "nome": "W",
+        "idade": "5",
+        "preco": 30
+      },
+      {
+        "nome": "Y",
+        "idade": "20",
+        "preco": 40
+      },
+      {
+        "nome": "K",
+        "idade": "4",
+        "preco": 30
+      }
+    ],
+    "quantidade": 3,
+    "precoTotal": 100
+  },
+  {
+    "codigo": 11,
+    "plano": "Bitix Customer Plano 2",
+    "beneficiario": [
+      {
+        "nome": "Wesley",
+        "idade": "37",
+        "preco": 30
+      },
+      {
+        "nome": "Vanessa",
+        "idade": "22",
+        "preco": 30
+      }
+    ],
+    "quantidade": 2,
+    "precoTotal": 60
   }
 ]

@@ -23,14 +23,12 @@ const viewAllProposta = (arr) =>{
             </td>          
         </tr>    
         `
-    setTimeout(()=>{
-        fetch('http://10.4.0.82:55200/proposta', {
+        fetch('http://192.168.1.7:55200/proposta', {
             method: 'GET'
             }).then((response) => {
                 const data = response.json()
                 data.then((json) => viewAllProposta(json))
             })  
-    },2*1000)
 })()
 
 

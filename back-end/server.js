@@ -4,7 +4,10 @@ const routers = require("./routers")
 
 const app = express()
 
-app.listen(55200, () => {
+const porta = 55200
+const hostName = '192.168.1.7'
+
+app.listen(porta, hostName, () => {
     console.log(" SERVIDOR START...!")
 })
 app.use(express.json())

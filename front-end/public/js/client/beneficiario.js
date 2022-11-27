@@ -16,7 +16,7 @@ const beneficiario = () =>{
 }
 
 (() => {
-    fetch('http://10.4.0.82:55200/planos', {
+    fetch('http://192.168.1.7:55200/planos', {
         method: 'GET'}).then((response) => {
             const data = response.json();
             data.then((json) => listarValores(json))
@@ -44,7 +44,7 @@ const viewBeneficiario = (arr) =>{
 }
 
 const inserirBeneficiario = ()=>{  
-    fetch('http://10.4.0.82:55200/beneficiarios-cadastrar', {
+    fetch('http://192.168.1.7:55200/beneficiarios-cadastrar', {
         method: 'POST',
         body : JSON.stringify({
         "plano" : plano.value,

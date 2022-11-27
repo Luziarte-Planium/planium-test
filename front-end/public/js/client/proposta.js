@@ -1,7 +1,7 @@
 const listaProposta = document.getElementById("listaProposta")
 
 const insertProposta = () => {
-    fetch('http://10.4.0.82:55200/proposta-cadastrar', {
+    fetch('http://192.168.1.7:55200/proposta-cadastrar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     }).then((response) => {
@@ -54,7 +54,7 @@ const viewProposta = (arr) =>{
          </div>
         `
     setTimeout(()=>{
-        fetch('http://10.4.0.82:55200/proposta-find', {
+        fetch('http://192.168.1.7:55200/proposta-find', {
             method: 'GET',
                 }).then((response) => {
                 const res = response.json()
@@ -62,7 +62,7 @@ const viewProposta = (arr) =>{
                     viewProposta(json)
                 })
             })
-    },2*1000)
+    }, 2*1000)
 })()
 
 
